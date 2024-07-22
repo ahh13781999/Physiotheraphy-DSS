@@ -1,0 +1,270 @@
+@import "../../app.scss";
+
+.services {
+  background: linear-gradient(180deg, #0c0c1d, #111132);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .textContainer {
+    flex: 1;
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    @include mobile {
+      align-self: center;
+      text-align: center;
+      flex-direction: column;
+    }
+
+    p {
+      font-weight: 200;
+      font-size: 20px;
+      color: gray;
+      text-align: right;
+    }
+
+    hr {
+      width: 500px;
+      border: none;
+      border-top: 0.5px solid gray;
+
+      @include mobile {
+        width: 300px;
+      }
+    }
+  }
+
+  .titleContainer {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mobile {
+      width: 100%;
+    }
+
+    .title {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      @include mobile {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+
+      img {
+        width: 300px;
+        height: 150px;
+        border-radius: 50px;
+        object-fit: cover;
+
+        @include mobile {
+          width: 200px;
+          height: 100px;
+          border-radius: 20px;
+
+        }
+      }
+
+      h1 {
+        font-size: 96px;
+        font-weight: 100;
+
+        @include mobile {
+          font-size: 36px;
+        }
+      }
+    }
+  }
+
+  .listContainer {
+    flex: 2;
+    display: flex;
+    max-width: 1366px;
+    margin: auto;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .patientInformation {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 1rem;
+      color: gray;
+      font-size: x-large;
+
+      @include mobile {
+        row-gap: 0.5rem;
+        padding: 10px;
+        text-align: center;
+        align-items: center;
+        font-size: medium;
+      }
+
+      input {
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: transparent;
+        color: gray;
+        border-color: wheat;
+        @include mobile {
+          padding-left: 4px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          width: 50%;
+          border-radius: 0.25rem;
+        }
+      }
+
+      select {
+        padding-left: 6px;
+        padding-right: 6px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        background-color: transparent;
+        color: gray;
+        border-color: wheat;
+        @include mobile {
+          padding-left: 4px;
+          padding-top: 6px;
+          padding-bottom: 6px;
+          width: 50%;
+          border-radius: 0.25rem;
+        }
+      }
+
+      button {
+        padding: 10px;
+        background-color: orange;
+        cursor: pointer;
+
+        @include mobile {
+          background-color: transparent;
+          border: 1px solid orange;
+          border-radius: 5px;
+          color: orange;
+          width: 50%;
+          padding: 5px;
+        }
+      }
+
+      button:hover {
+        color: orange;
+        background-color: transparent;
+        border-color: orange;
+      }
+    }
+
+    .question-section {
+      padding: 50px;
+      display: flex;
+      font-size: x-large;
+      align-items: center;
+      justify-content: center;
+
+      @include mobile {
+        padding: 10px;
+        text-align: center;
+        font-size: small;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .question-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 1rem;
+
+        .buttons {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          column-gap: 0.5rem;
+
+          button {
+            padding-left: 2rem;
+            padding-right: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            border: 1px solid white;
+            border-radius: 10px;
+            background-color: transparent;
+            color: white;
+            cursor: pointer;
+            font-weight: 700;
+          }
+
+          button:first-child:hover {
+            color: green;
+            border-color: green;
+          }
+
+          button:nth-child(2):hover {
+            color: red;
+            border-color: red;
+          }
+        }
+
+      }
+
+      .diagnosis-button {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border: 1px solid white;
+        border-radius: 10px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+        font-weight: 700;
+      }
+
+      .diagnosis-button:hover {
+        border-color: blueviolet;
+        color: blueviolet;
+      }
+
+    }
+
+    .result-section {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 1rem;
+      font-size: x-large;
+
+      @include mobile {
+        align-items: center;
+        row-gap: 0.5rem;
+        padding: 10px;
+        text-align: center;
+        font-size: medium;
+      }
+
+      h2 {
+        color: cornflowerblue;
+      }
+
+      h3 {
+        color: coral;
+      }
+    }
+  }
+}
